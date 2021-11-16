@@ -1,0 +1,82 @@
+.input-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  flex: 1;
+}
+.input-area > * + * {
+  margin-top: 5rem !important;
+}
+.MuiFormControl-root {
+  width: 250px;
+}
+.inputcontainer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.pure-input {
+  display: flex;
+  align-items: center;
+}
+.pure-input button {
+  height: 100%;
+  margin-left: 2rem;
+}
+.table-area {
+  width: 90%;
+  margin: 3rem auto;
+}
+.card-warpper {
+  margin-top: 2rem;
+}
+.card-content {
+  display: flex;
+  align-items: center;
+}
+.text {
+  margin-left: 1rem !important;
+  margin-bottom: 0rem !important;
+}
+.output-input-wrapper,
+.pure-input {
+  width: 410px;
+}
+.pure-input {
+  display: flex;
+  align-items: center;
+}
+th:first-child,
+td:first-child {
+  text-align: left !important;
+}
+th,
+td {
+  text-align: center !important;
+}
+.pure-input > *:last-child {
+  flex: 1;
+}
+.output-input-wrapper > * {
+  width: 100%;
+  margin-left: 0px !important;
+  margin-bottom: 10px !important;
+}
+@media screen and (max-width: 400px) {
+  .pure-input {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .pure-input button {
+    width: 250px;
+    margin-left: 0px;
+    margin-top: 2rem;
+  }
+  .output-input-wrapper,
+  .pure-input {
+    width: 250px;
+  }
+}
