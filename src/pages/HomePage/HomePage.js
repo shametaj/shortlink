@@ -33,43 +33,20 @@ export const HomePage = () => {
   };
 
 
-  // const HandleApiSubmit = (e) => {
-  //   axios
-  //     .post(`https://api.shrtco.de/v2/shorten?url=${inputValue}`)
-  //     .then((res) => {
-  //       console.log(res);
-  //       let result = res["data"]["result"];
-
-  //       setoutputValue(result["short_link"]);
-
-  //       setSessionStorage("full_share_link", result["full_share_link"]);
-  //       setSessionStorage("full_short_link", result["full_short_link"]);
-  //       setSessionStorage("original_link", result["original_link"]);
-  //       setSessionStorage("share_link", result["share_link"]);
-  //       setSessionStorage("short_link", result["short_link"]);
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-  // };
-
-
-const HandleApiSubmit = (e) => {
-    const url = 'https://urlshortener.smef.io/urls/';
-    const username = 'abat';
-    const password = '5hWDEcFK4FUW';
-    let basicAuth = 'Basic ' + btoa(username + ':' + password);
+  const HandleApiSubmit = (e) => {
     axios
-      .post(url, {}, { headers: { 'Authorization': + basicAuth }})
-      .then(function(res) {
-        console.log('Authenticated');
-        let result = res['data']["result"];
-        setoutputValue(result["id"]);
-        setSessionStorage("url", result["url"]);
-        setSessionStorage("ttlInSeconds", result["ttlInSeconds"]);
-        setSessionStorage("createdDate", result["createdDate"]);
-        setSessionStorage("modifiedDate", result["modifiedDate"]);
-       
+      .post(`https://api.shrtco.de/v2/shorten?url=${inputValue}`)
+      .then((res) => {
+        console.log(res);
+        let result = res["data"]["result"];
+
+        setoutputValue(result["short_link"]);
+
+        setSessionStorage("full_share_link", result["full_share_link"]);
+        setSessionStorage("full_short_link", result["full_short_link"]);
+        setSessionStorage("original_link", result["original_link"]);
+        setSessionStorage("share_link", result["share_link"]);
+        setSessionStorage("short_link", result["short_link"]);
       })
       .catch((err) => {
         console.log(err);
